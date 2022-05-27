@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/pomodoro.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon">
+  
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="/script/pomodoro.js"></script>
+
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/996973c893.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"/>
+
+    <title>Pomodoro Saati</title>
+  </head>
+  <body onload="template()">
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+            <span class="image"> <img src="/image/logo.png" alt=""></span>
+            <div class="text logo-text">
+                <span class="name">DTBOP</span>
+                <span class="profession">Desire to be on peak</span>
+            </div>
+        </div>
+        <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+      <div class="menu-bar">
+          <div class="menu">
+              <ul class="menu-links">
+                  <li class="nav-link">
+                      <a href="calendar">
+                          <i class='bx bx-calendar icon' style='color:#0f7577'></i>
+                          <span class="text nav-text">Takvim</span>
+                      </a>
+                  </li>
+
+                  </li>
+                  <li class="nav-link">
+                      <a href="list">
+                          <i class='bx bx-check-double icon' style='color:#0f7577' ></i> 
+                          <span class="text nav-text">Yapılacaklar</span>
+                      </a>
+                  </li>
+
+                  <li class="nav-link">
+                      <a href="pomodoro">
+                          <i class='bx bx-time-five icon' style='color:#0f7577' ></i>
+                          <span class="text nav-text">Pomodoro</span>
+                      </a>
+                  </li>
+                  <li class="nav-link">
+                    <a href="planner">
+                     <i class='bx bx-calendar-week icon' style='color:#0f7577'></i>
+                    <span class="text nav-text">Planlayıcı</span>
+                        </a>
+                  
+
+                  <li class="nav-link">
+                      <a href="note">
+                          <i class='bx bx-edit-alt icon' style='color:#0f7577'  ></i>
+                          <span class="text nav-text">Notlar</span>
+                      </a>
+                  </li>
+
+              </ul>
+          </div>
+
+          <div class="bottom-content">
+            <li class="nav-link">
+                  <a href="/">
+                      <i class='bx bx-user-circle icon' style='color:#0f7577' ></i>
+                      <span class="text nav-text">Hesap</span>
+                  </a>
+              </li>
+      </div>
+  </nav>
+
+
+    <div class="container">
+      <!-- Heading -->
+      <h1 class="text-center my-5 heading">Pomodoro Saati</h1>
+
+      <!-- Main Timer -->
+      <div class="container timer">
+        <div class="row">
+          <div class="col-5">
+            <h4 id="minutes"></h4>
+          </div>
+          <div class="col-2">
+            <h4>:</h4>
+          </div>
+          <div class="col-5">
+            <h4 id="seconds"></h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Finished Message -->
+      <div class="my-5">
+        <h3 id="done" class="text-center"></h3>
+      </div>
+
+      <!-- Start Button and reset button-->
+      <div class="conatiner d-flex justify-content-center my-5">
+        <button class="btn" onclick="start_timer()">
+          <i class="fas fa-play fa-2x"></i>
+        </button>
+        <a href="/calendar"><i class="fas fa-redo-alt fa-2x"></i></a>
+      </div>
+    </div>
+
+    <script>
+      const body = document.querySelector('body'),
+    sidebar = body.querySelector('nav'),
+    toggle = body.querySelector(".toggle"),
+    searchBtn = body.querySelector(".search-box"),
+    modeSwitch = body.querySelector(".toggle-switch"),
+    modeText = body.querySelector(".mode-text");
+  
+  
+  toggle.addEventListener("click" , () =>{
+  sidebar.classList.toggle("close");
+  })
+  
+  searchBtn.addEventListener("click" , () =>{
+  sidebar.classList.remove("close");
+  })
+  
+  </script> 
+  </body>
+</html>

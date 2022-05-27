@@ -1,0 +1,52 @@
+<%- include('sidebar') -%>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-DTBOP</title>
+    <link rel="stylesheet" href="/css/note.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon">
+</head>
+<body>
+    <body>
+
+       
+        <form action="/api/note" method="post">
+            <input class="notesTitle" type="text" name="title" placeholder="> Not Başlığını Gir...">
+            <textarea
+                placeholder="> Notu Gir..."
+                id="textarea"
+                name="textarea"
+                title="Text Area"
+                required
+            ></textarea>
+            <button class="addNote" type="submit">Notu Ekle</button>
+            <br />
+        </form>
+        <% for(var i=0; i < note.length; i++) {%>
+      <div class="box">
+          <h1><%= note[i].title %></h1>
+          <p><%= note[i].body.slice(0,20) %></p>
+          <p>Son Düzenlenme: <%= note[i].updated.toLocaleDateString() %></p>
+
+          <button id="<%= note[i].id %>"><i class="fas fa-trash"></i>
+          </button>
+      </div>
+      <% } %>
+
+
+    <script src="/script/notes.js" type="module"></script>
+    <script>
+  
+
+
+    </script>
+    
+</body>
+</html>

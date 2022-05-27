@@ -1,0 +1,105 @@
+<%- include('sidebar') -%>
+
+
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clander-DTBOP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calender.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+  
+  </head>
+  <body>    
+  
+
+      <div class="calendar">
+        <div class="calendar-top">
+          <ul class="days">
+            <li class="day">Pzt</li>
+            <li class="day">Sl</li>
+            <li class="day">Çr</li>
+            <li class="day">Pr</li>
+            <li class="day">Cm</li>
+            <li class="day">Cmt</li>
+            <li class="day">Pz<li>
+          </ul> 
+
+<ul class="dates"> 
+   <li class="date">28</li>
+   <li class="date current">1</li>
+   <li class="date current">2</li>
+   <li class="date current">3</li>
+   <li class="date current">4</li>
+   <li class="date current">5</li>
+   <li class="date current">6</li>
+   <li class="date current">7</li>
+   <li class="date current">8</li>
+   <li class="date current">9</li>
+   <li class="date current">10</li>
+   <li class="date current">11</li>
+   <li class="date current">12</li>
+   <li class="date current">13</li>
+   <li class="date current">14</li>
+   <li class="date current">15</li>
+   <li class="date current">16</li>
+   <li class="date current">17</li>
+   <li class="date current">18</li>
+   <li class="date current">19</li>
+   <li class="date current">20</li>
+   <li class="date current">21</li>
+   <li class="date current">22</li>
+   <li class="date current">23</li>
+   <li class="date current">24</li>
+   <li class="date current today">25</li>
+   <li class="date current">26</li>
+   <li class="date current">27</li>
+   <li class="date current">28</li>
+   <li class="date current">29</li>
+   <li class="date current">30</li>
+   <li class="date current">31</li>
+   <li class="date">1</li>
+   <li class="date">2</li>
+   <li class="date">3</li>
+
+</ul>
+       
+    </div>
+    <div class="calendar-bottom">
+      <button class="prev-btn" onclick="prevMonth()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+  
+      <span class="current-month-year">Mart, 2022</span>
+  
+      <button class="next-btn" onclick="nextMonth()">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="/script/calendar.js"></script>  
+  <script>
+    const body = document.querySelector('body'),
+  sidebar = body.querySelector('nav'),
+  toggle = body.querySelector(".toggle"),
+  searchBtn = body.querySelector(".search-box"),
+  modeSwitch = body.querySelector(".toggle-switch"),
+  modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+sidebar.classList.remove("close");
+})
+
+</script> 
+  </body>
+</html>

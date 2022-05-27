@@ -1,0 +1,149 @@
+<%- include('sidebar') -%>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utg-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/planner.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <title>Planner-DTBOP</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Haftalık Planlayıcı</h1>
+
+        <div class="task__container">
+            <div class="task__name" id="study" style="background-color: #ffc868;">Ders</div>
+            <div class="task__name" id="gym" style="background-color: #dd6161">Spor</div>   
+            <div class="task__name" id="book" style="background-color: #3b8edb">Kitap</div>
+            <div class="task__name" id="tv" style="background-color: #30a799">TV</div>
+            <div class="task__name" id="friends" style="background-color: #3bc759">Buluşma</div>
+            <div class="task__name" id="work" style="background-color: #816ef0">İş</div>
+            <div class="task__name" id="break" style="background-color: #eb9963;">Mola</div>
+            <div class="task__name" id="deselect" style="background-color: #363333;">Hepsini Sil</div>
+        </div>  
+
+        <div class="schedule__container">
+            <div class="days__container">
+                <span class="corner"></span>
+                <div class="day">Pazartesi</div>
+                <div class="day">Salı</div>
+                <div class="day">Çarşamba</div>
+                <div class="day">Perşembe</div>
+                <div class="day">Cuma</div>
+                <div class="day">Cumartesi</div>
+                <div class="day">Pazar</div>
+            </div>
+            <div class="part__day">
+                <span class="time">8.00 <br> - <br> 10.00</span>
+                <div class="task" id="1"></div>
+                <div class="task" id="2"></div>
+                <div class="task" id="3"></div>
+                <div class="task" id="4"></div>
+                <div class="task" id="5"></div>
+                <div class="task" id="6"></div>
+                <div class="task" id="7"></div>
+            </div>
+            <div class="part__day">
+                <span class="time">10.00 <br> - <br> 12.00</span>
+                <div class="task" id="8"></div>
+                <div class="task" id="9"></div>
+                <div class="task" id="10"></div>
+                <div class="task" id="11"></div>
+                <div class="task" id="12"></div>
+                <div class="task" id="13"></div>
+                <div class="task" id="14"></div>
+            </div>
+            <div class="part__day">
+                <span class="time">12.00 <br> - <br> 14.00</span>
+                <div class="task" id="15"></div>
+                <div class="task" id="16"></div>
+                <div class="task" id="17"></div>
+                <div class="task" id="18"></div>
+                <div class="task" id="19"></div>
+                <div class="task" id="20"></div>
+                <div class="task" id="21"></div>
+            </div>
+            <div class="part__day">
+                <span class="time">14.00 <br> - <br> 16.00</span>
+                <div class="task" id="22"></div>
+                <div class="task" id="23"></div>
+                <div class="task" id="24"></div>
+                <div class="task" id="25"></div>
+                <div class="task" id="26"></div>
+                <div class="task" id="27"></div>
+                <div class="task" id="28"></div>
+            </div>
+            <div class="part__day">
+                <span class="time">16.00<br> - <br>18.00</span>
+                <div class="task" id="29"></div>
+                <div class="task" id="30"></div>
+                <div class="task" id="31"></div>
+                <div class="task" id="32"></div>
+                <div class="task" id="33"></div>
+                <div class="task" id="34"></div>
+                <div class="task" id="35"></div>
+            </div>
+            <div class="part__day">
+                <span class="time">18.00<br> - <br> 20.00</span>
+                <div class="task" id="36"></div>
+                <div class="task" id="37"></div>
+                <div class="task" id="38"></div>
+                <div class="task" id="39"></div>
+                <div class="task" id="40"></div>
+                <div class="task" id="41"></div>
+                <div class="task" id="42"></div>
+            </div>
+            <div class="part__day">
+                <span class="time">20.00 <br> - <br> 22.00</span>
+                <div class="task" id="43"></div>
+                <div class="task" id="44"></div>
+                <div class="task" id="45"></div>
+                <div class="task" id="46"></div>
+                <div class="task" id="47"></div>
+                <div class="task" id="48"></div>
+                <div class="task" id="49"></div>
+            </div>
+            <div class="part__day">
+                <span class="time">22.00 <br> - <br> 24.00</span>
+                <div class="task" id="p50"></div>
+                <div class="task" id="p51"></div>
+                <div class="task" id="p52"></div>
+                <div class="task" id="p53"></div>
+                <div class="task" id="p54"></div>
+                <div class="task" id="p55"></div>
+                <div class="task" id="p56"></div>
+            </div>
+
+            </div>
+        
+   
+
+    <script src="/script/planner.js"></script>
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+    </script>
+
+</body>
+</html>
